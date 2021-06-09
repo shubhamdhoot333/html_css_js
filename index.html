@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Increment count when button is clicked</title>
+	       <style>
+		   .buttonContainer {
+                width: 75%;
+            }
+
+        .buttonContainer > .buttonClass {
+                width: 30%;
+                height: 48px;
+                font-size: 24px;
+            }
+			</style>
+</head>
+
+<body>
+	<div id="btns" class="buttonContainer">
+            <button id="btn1" class="buttonClass">1</button>
+            <button id="btn2" class="buttonClass">2</button>
+            <button id="btn3" class="buttonClass">3</button>
+            <button id="btn4" class="buttonClass">4</button>
+            <button id="btn5" class="buttonClass">5</button>
+            <button id="btn6" class="buttonClass">6</button>
+            <button id="btn7" class="buttonClass">7</button>
+            <button id="btn8" class="buttonClass">8</button>
+            <button id="btn9" class="buttonClass">9</button>
+            
+        
+        </div>
+
+	
+
+	
+
+	
+
+	<script type="text/javascript">
+		var btn = document.getElementById("btn5");
+		var disp1 = document.getElementById("btn1");
+		var disp2 = document.getElementById("btn2");
+		var disp3 = document.getElementById("btn3");
+		var disp4 = document.getElementById("btn4");
+		
+		var disp6 = document.getElementById("btn6");
+		var disp7 = document.getElementById("btn7");
+		var disp8 = document.getElementById("btn8");
+		var disp9 = document.getElementById("btn9");
+		
+		btn.onclick = function () {
+		var temp=disp1.innerHTML;
+			disp1.innerHTML = disp4.innerHTML;
+			disp4.innerHTML = disp7.innerHTML;
+			disp7.innerHTML = disp8.innerHTML;
+			disp8.innerHTML = disp9.innerHTML;
+			disp9.innerHTML = disp6.innerHTML;
+			disp6.innerHTML = disp3.innerHTML;
+			disp3.innerHTML = disp2.innerHTML;
+			disp2.innerHTML = temp;
+			
+		}
+	</script>
+</body>
+
+</html>
